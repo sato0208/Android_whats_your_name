@@ -2,14 +2,9 @@ package com.example.whatsyourname
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
 import android.widget.EditText
-import android.widget.ImageView
 import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.view.*
-import kotlinx.android.synthetic.main.activity_main.view.button
 
 
 class MainActivity : AppCompatActivity() {
@@ -27,9 +22,10 @@ class MainActivity : AppCompatActivity() {
 // 「押してね」ボタンを押したら
 //        button.setOnClickListener(this)
         button.setOnClickListener {
-            //Todo １． 「〇〇(入力した文字)さん、こんにちは」という文字を出す
-            textView.text = EditText.text.toString() + "さん、こんにちは"
-            /* Todo ２．画像を出す */
+
+            // 「〇〇(入力した文字)さん、こんにちは」という文字を出す
+            textView.text = editText.text.toString() + "さん、こんにちは"
+//           ．画像を出す
             imageView.setImageResource(R.drawable.resize)
         }
     }
